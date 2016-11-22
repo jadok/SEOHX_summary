@@ -14,7 +14,7 @@ function form_summary() {
 
   var css_rule = "";
   for (var i = 0; i < 7; i++) { //Does not expect h7
-    css_rule += "h" + i + "{margin-left:" + (i * 10) + "px;}";
+    css_rule += "h" + i + "{margin-left:"+(i*10)+"px;margin-bottom:0;}";
   }
   var my_styling = $('<style/>')
     .text(css_rule);
@@ -23,7 +23,7 @@ function form_summary() {
   $.each(hx, function (i, e) {
     var tmp = $("<" + e.tagName + "/>")
       .addClass('custom_sum')
-      .text("#" + e.id + "." + e.classList.toString() + "->" + e.innerText);
+      .text(e.tagName.substr(1, 2) + ". #" + e.id + "." + e.classList.toString() + "->" + e.innerText);
     sumarry.append(tmp);
   });
   sumarry.append(my_styling);

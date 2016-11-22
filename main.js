@@ -8,7 +8,8 @@ function form_summary() {
     'height': "100%",
     'background': "#000",
     'color': 'orange',
-    'margin': 'auto'
+    'margin': 'auto',
+    'z-index': 999999
   });
 
   var css_rule = "";

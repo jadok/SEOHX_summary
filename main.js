@@ -13,7 +13,7 @@ function form_summary() {
 
   var css_rule = "";
   for (var i = 0; i < 7; i++) { //Does not expect h7
-    css_rule += "h" + i + "{margin-left:" + (i * 10) + "}";
+    css_rule += "h" + i + "{margin-left:" + (i * 10) + "px;}";
   }
   var my_styling = $('<style/>')
     .text(css_rule);
